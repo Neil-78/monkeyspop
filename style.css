@@ -420,3 +420,27 @@ footer h2 {
         right: -100%;
     }
 }
+/* Redes Sociales en el Footer */
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.social-links a:hover {
+    color: var(--secondary);
+    background: var(--primary);
+    transform: scale(1.05);
+}
