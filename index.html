@@ -32,7 +32,7 @@
     </div>
     <div id="overlay" onclick="window.toggleCart()"></div>
 
-    <header class="hero section-animate">
+    <header class="hero section-animate" id="hero-section">
         <div class="hero-text">
             <h1>De estudiantes,<br>para estudiantes.</h1>
             <p>Ofrecemos snacks divertidos, accesibles y deliciosos. Perfectos para disfrutar en el receso.</p>
@@ -45,7 +45,7 @@
             <a href="#menu" class="btn-primary">Ver Menú</a>
         </div>
         <div class="hero-image">
-            <img src="logo.jpg" alt="Mascota Monkeys Pop"> 
+            <img src="logo.jpg" alt="Mascota Monkeys Pop" class="main-logo"> 
         </div>
     </header>
 
@@ -65,22 +65,12 @@
         <div class="products-grid">
             
             <div class="product-card">
-                <img src="choconena1.jpg" alt="Choconena Cacahuate">
+                <img src="choconena1.jpg" alt="Choconena">
                 <div class="product-info">
                     <h3>🍫 Choconenas</h3>
                     <p>Plátanos cubiertos con chocolate y toppings a elegir. Fruta y dulzura perfecta.</p>
-                    <span class="price">$25.00</span>
-                    <button class="btn-add" onclick="window.addToCart('Choconena Clásica', 25)">Añadir al pedido</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="choconena2.jpg" alt="Choconena Nuez">
-                <div class="product-info">
-                    <h3>🍫 Choconena Premium</h3>
-                    <p>Nuestra base clásica cubierta con trozos de nuez tostada.</p>
-                    <span class="price">$30.00</span>
-                    <button class="btn-add" onclick="window.addToCart('Choconena Nuez', 30)">Añadir al pedido</button>
+                    <span class="price">$12.00</span>
+                    <button class="btn-add" onclick="window.addToCart('Choconena', 12)">Añadir al pedido</button>
                 </div>
             </div>
 
@@ -89,8 +79,8 @@
                 <div class="product-info">
                     <h3>🍓 Monkiletas</h3>
                     <p>Yogurt preparado con toppings: nuez, almendra, sprinkles o arándano. ¡Súper rico!</p>
-                    <span class="price">$35.00</span>
-                    <button class="btn-add" onclick="window.addToCart('Monkileta', 35)">Añadir al pedido</button>
+                    <span class="price">$15.00</span>
+                    <button class="btn-add" onclick="window.addToCart('Monkileta', 15)">Añadir al pedido</button>
                 </div>
             </div>
 
@@ -117,6 +107,12 @@
         <div class="footer-content">
             <h2>Monkeys Pop</h2>
             <p>📍 ¿Dónde encontrarnos? Dentro de la escuela durante el horario de receso.</p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/monkeyss.pop?igsh=MWRpemVxNnpoYXNweQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i> ¡Síguenos en Instagram!
+                </a>
+            </div>
         </div>
     </footer>
 
