@@ -1,1 +1,125 @@
-q
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkeys Pop | Snacks Divertidos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-nav">🍌 Monkeys Pop</div>
+        <div class="cart-icon" onclick="window.toggleCart()">
+            <i class="fas fa-shopping-basket"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Pedido 📝</h3>
+            <button onclick="window.toggleCart()" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            </div>
+        <div class="cart-footer">
+            <h4>Total: $<span id="cart-total">0.00</span></h4>
+            <button class="checkout-btn" onclick="window.checkout()">Hacer Pedido</button>
+        </div>
+    </div>
+    <div id="overlay" onclick="window.toggleCart()"></div>
+
+    <header class="hero section-animate">
+        <div class="hero-text">
+            <h1>De estudiantes,<br>para estudiantes.</h1>
+            <p>Ofrecemos snacks divertidos, accesibles y deliciosos. Perfectos para disfrutar en el receso.</p>
+            <ul class="hero-tags">
+                <li>✨ Fresco</li>
+                <li>✨ Rico</li>
+                <li>✨ Diferente</li>
+                <li>✨ Creativo</li>
+            </ul>
+            <a href="#menu" class="btn-primary">Ver Menú</a>
+        </div>
+        <div class="hero-image">
+            <img src="logo.jpg" alt="Mascota Monkeys Pop"> 
+        </div>
+    </header>
+
+    <section class="about section-animate">
+        <div class="about-card">
+            <h2>💛 ¿Quiénes somos?</h2>
+            <p>Somos un equipo de estudiantes emprendedores que buscamos ofrecer una alternativa más divertida y fresca dentro de la escuela. Creamos <strong>Monkeys Pop</strong> con la idea de combinar sabor, creatividad y accesibilidad en un solo producto.</p>
+        </div>
+        <div class="about-card highlight">
+            <h2>🎯 Nuestro objetivo</h2>
+            <p>Brindar a los estudiantes una opción de snack diferente, accesible y atractiva, que puedan disfrutar durante el receso.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu section-animate">
+        <h2 class="section-title">🍌 Nuestros Productos</h2>
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <img src="choconena1.jpg" alt="Choconena Cacahuate">
+                <div class="product-info">
+                    <h3>🍫 Choconenas</h3>
+                    <p>Plátanos cubiertos con chocolate y toppings a elegir. Fruta y dulzura perfecta.</p>
+                    <span class="price">$25.00</span>
+                    <button class="btn-add" onclick="window.addToCart('Choconena Clásica', 25)">Añadir al pedido</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="choconena2.jpg" alt="Choconena Nuez">
+                <div class="product-info">
+                    <h3>🍫 Choconena Premium</h3>
+                    <p>Nuestra base clásica cubierta con trozos de nuez tostada.</p>
+                    <span class="price">$30.00</span>
+                    <button class="btn-add" onclick="window.addToCart('Choconena Nuez', 30)">Añadir al pedido</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-placeholder"><i class="fas fa-ice-cream"></i></div>
+                <div class="product-info">
+                    <h3>🍓 Monkiletas</h3>
+                    <p>Yogurt preparado con toppings: nuez, almendra, sprinkles o arándano. ¡Súper rico!</p>
+                    <span class="price">$35.00</span>
+                    <button class="btn-add" onclick="window.addToCart('Monkileta', 35)">Añadir al pedido</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="features-nutrition section-animate">
+        <div class="features">
+            <h2>🌱 ¿Por qué elegirnos?</h2>
+            <ul>
+                <li><i class="fas fa-leaf"></i> Ingredientes frescos</li>
+                <li><i class="fas fa-coins"></i> Precio accesible</li>
+                <li><i class="fas fa-smile-wink"></i> Presentación divertida</li>
+                <li><i class="fas fa-user-graduate"></i> Hecho por estudiantes</li>
+            </ul>
+        </div>
+        <div class="nutrition">
+            <h2>Información Nutrimental</h2>
+            <img src="tabla.png" alt="Tabla nutrimental">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Monkeys Pop</h2>
+            <p>📍 ¿Dónde encontrarnos? Dentro de la escuela durante el horario de receso.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
