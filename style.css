@@ -68,7 +68,6 @@ nav {
     border-radius: 50%;
 }
 
-/* Lluvia de Chocobananas y Hero */
 .hero {
     display: flex;
     align-items: center;
@@ -79,14 +78,17 @@ nav {
     overflow: hidden;
 }
 
-/* Estilos de la chocobanana que cae */
+/* Animación y recorte del PNG */
 .falling-banana {
     position: absolute;
-    top: -100px;
-    width: 60px; /* Tamaño de la chocobanana animada */
+    top: -120px;
+    width: 80px; 
+    height: 80px;
+    object-fit: cover;
+    clip-path: circle(40%); /* Recorta los bordes cuadrados para ocultar el fondo falso */
     animation: fall linear infinite;
     z-index: 0;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 @keyframes fall {
@@ -97,7 +99,7 @@ nav {
 
 .hero-text, .hero-image {
     position: relative;
-    z-index: 10; /* Asegura que el texto y el logo estén sobre las chocobananas */
+    z-index: 10;
 }
 
 .hero-text {
@@ -200,7 +202,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    justify-content: center; /* Centra los productos si son pocos */
+    justify-content: center;
 }
 
 .product-card {
@@ -314,7 +316,6 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Footer y Redes Sociales */
 footer {
     background-color: var(--secondary);
     color: var(--white);

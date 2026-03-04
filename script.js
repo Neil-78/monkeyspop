@@ -14,7 +14,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// --- Lógica del Carrito ---
 let cart = [];
 
 window.addToCart = function(name, price) {
@@ -126,11 +125,7 @@ window.checkout = async function() {
 
 window.updateCartUI();
 
-// --- Animaciones al hacer Scroll ---
-const observerOptions = {
-    threshold: 0.2
-};
-
+const observerOptions = { threshold: 0.2 };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -143,28 +138,21 @@ document.querySelectorAll('.section-animate').forEach(section => {
     observer.observe(section);
 });
 
-// --- Efecto de Chocobananas Cayendo ---
 function createFallingBananas() {
     const heroSection = document.getElementById('hero-section');
-    const numberOfBananas = 10; // Puedes ajustar cuántas caen a la vez
+    const numberOfBananas = 10;
 
     for (let i = 0; i < numberOfBananas; i++) {
         let banana = document.createElement('img');
         banana.src = 'chocobanana-anim.png';
         banana.classList.add('falling-banana');
         
-        // Posición horizontal aleatoria
         banana.style.left = Math.random() * 100 + 'vw';
-        
-        // Duración de la caída aleatoria (entre 3s y 8s)
         banana.style.animationDuration = Math.random() * 5 + 3 + 's';
-        
-        // Retraso aleatorio para que no caigan todas al mismo tiempo
         banana.style.animationDelay = Math.random() * 5 + 's';
 
         heroSection.appendChild(banana);
     }
 }
 
-// Iniciar la lluvia cuando cargue la página
 window.onload = createFallingBananas;
